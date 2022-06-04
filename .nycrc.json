@@ -1,0 +1,11 @@
+{
+  "include": "test/api",
+  "exclude": "src",
+  "report-dir": "./reports",
+  "check-coverage": true,
+  "all": true,
+  "branches": 50,
+  "lines": 50,
+  "functions": 50,
+  "statements": 50
+}

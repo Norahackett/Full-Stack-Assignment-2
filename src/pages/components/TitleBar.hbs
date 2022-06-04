@@ -1,0 +1,17 @@
+<div class="box has-text-centered columns m-1">
+  <div class="column">
+    <img src="/images/hikes2.png" width="60" alt="img"/>
+  </div>
+  <div class="column">
+    <div class="title is-5"> {{title}} </div>
+    <div class="subtitle is-5"> {{subTitle}} </div>
+  </div>
+  <div class="column">
+    <i class="fas fa-map-marker fa-3x" style="color:rgb(95, 96, 173)" title="Source repo" pos="bottom" uk-tooltip></i>
+    {{#if user}}
+      <div class="is-size-7">{{user.firstName}} {{user.lastName}}</div>
+    {{else}}
+      <div class="is-size-7">Traillist</div>
+    {{/if}}
+  </div>
+</div>

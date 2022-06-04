@@ -1,0 +1,17 @@
+<div class="columns is-vcentered">
+    <div class="column is-two-thirds">
+        {{> TitleBar title="Trails of Ireland" subTitle="Trails!"}}
+    </div>
+    <div class="column">
+        {{> MainNavigator }}
+    </div>
+</div>
+
+
+<section class="section">
+    <div class="name">
+        {{traillist.name}}
+    </div>
+    {{> list-trails}}
+    {{> add-trail}}
+</section>
