@@ -1,5 +1,5 @@
 import { db } from "../models/db.js";
-import { TrailSpec } from "../models/joi-schemas.js";
+
 
 
 export const eventController = {
@@ -16,7 +16,7 @@ export const eventController = {
 
     addEvent: {
         handler: async function (request, h) {
-            const event = await db.eventStore.getEventById(request.params.id);
+           // const event = await db.eventStore.getEventById(request.params.id);
             const newEvent = {
                 name: request.payload.name,
                 details: request.payload.details,
@@ -31,9 +31,10 @@ export const eventController = {
     deleteEvent: {
         handler: async function (request, h) {
             const event = await db.eventStore.getEventById(request.params.id);
-            if (!event) {
-                return Boom.notFound("No Event with this id");
-            }
+            console.log(event)
+           // if (!event) {
+            //    return Boom.notFound("No Event with this id");
+           // }
             await db.eventStore.deleteEventById(event._id);
             return h.redirect("/event");
         },

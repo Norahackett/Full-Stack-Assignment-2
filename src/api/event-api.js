@@ -39,12 +39,13 @@ export const eventApi = {
         },
         handler: async function (request, h) {
             try {
-                //const event = request.payload;
-                const newEvent = await db.eventStore.addEvent(request.params.id, request.payload);
+                const event = request.payload;
+                const newEvent = await db.eventStore.addEvent(event)
+                //(request.params.id, request.payload);
                 if (newEvent) {
                     return h.response(newEvent).code(201);
                 }
-                return Boom.badImplementation("error creating trail");
+                return Boom.badImplementation("error deleting Event");
             } catch (err) {
                 return Boom.serverUnavailable("Database Error");
             }
@@ -61,7 +62,7 @@ export const eventApi = {
                 if (!event) {
                     return Boom.notFound("No Event with this id");
                 }
-                await db.eventStore.deleteEvent(event._id);
+                await db.eventStore.deleteEventById(event._id);
                 return h.response().code(204);
             } catch (err) {
                 return Boom.serverUnavailable("No Event with this id");

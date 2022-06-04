@@ -11,8 +11,10 @@ export const eventMongoStore = {
         if (id) {
             const event = await Event.findOne({_id: id }).lean();
             return event;
+
         }
         return null;
+
     },
 
     async addEvent(event) {
@@ -34,11 +36,4 @@ export const eventMongoStore = {
         await Event.deleteMany({});
     },
 
-    async deleteEvent(id) {
-        try {
-            await Event.deleteOne({ _id: id });
-        } catch (error) {
-            console.log("bad id");
-        }
-    },
 };
