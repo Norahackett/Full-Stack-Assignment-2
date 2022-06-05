@@ -1,0 +1,24 @@
+<table class="table is-fullwidth">
+  <thead>
+    <th>Trail</th>
+    <th>Rating</th>
+    <th>Lat</th>
+    <th>Lon</th>
+    <th>Reviewer</th>
+    <th>Review</th>
+  </thead>
+  <tbody>
+    {{#each reviews}}
+      <tr>
+          <td>{{trail.name}}</td>
+          <td> {{rating}}</td>
+          <td> {{trail.latitude}}</td>
+          <td> {{trail.longitude}}</td>
+        <td> {{reviewer.firstName}} {{reviewer.lastName}} </td>
+          <td>{{review}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+<div class="box">
+</div>

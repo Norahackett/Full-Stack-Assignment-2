@@ -1,0 +1,53 @@
+{
+  "name": "traillist-hapi",
+  "version": "0.2.0",
+  "description": "",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js ",
+    "dev": "./node_modules/.bin/nodemon src/server.js  --ignore 'src/models/json/*.json'",
+    "lint": "./node_modules/.bin/eslint . --ext .js",
+    "test": "./node_modules/.bin/mocha --ui tdd test/**/*.js",
+    "coverage": "nyc --reporter=text npm run test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/boom": "^9.1.4",
+    "@hapi/cookie": "^11.0.2",
+    "@hapi/hapi": "^20.2.1",
+    "@hapi/inert": "^6.0.5",
+    "@hapi/vision": "^6.1.0",
+    "bcrypt": "^5.0.1",
+    "coveralls": "^3.1.1",
+    "dotenv": "^16.0.0",
+    "handlebars": "^4.7.7",
+    "hapi-auth-jwt2": "^10.2.0",
+    "hapi-swagger": "^14.5.2",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "lowdb": "^3.0.0",
+    "mais-mongoose-seeder": "^1.0.7",
+    "mocha-lcov-reporter": "^1.3.0",
+    "mongoose": "^6.2.9",
+    "save": "^2.5.0",
+    "save-dev": "0.0.1-security",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "axios": "^0.26.1",
+    "chai": "^4.3.6",
+    "eslint": "^8.12.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "mocha": "^9.2.2",
+    "nodemon": "^2.0.15",
+    "nyc": "^15.1.0",
+    "prettier": "^2.6.1"
+  },
+  "prettier": {
+    "printWidth": 120
+  }
+}
