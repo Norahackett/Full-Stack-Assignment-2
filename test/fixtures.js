@@ -75,13 +75,13 @@ export const testReviews = [
     lng: "-7.152420",
   },
   {
-    review: "nice easy hike",
+    review: "Nice easy hike for all the family",
     rating: 3,
     lat: "52.149220",
     lng: "-6.994620",
   },
   {
-    review: "boggy",
+    review: "From a hiking perspective, it could be better",
     rating: 2,
     lat: "52.161290",
     lng: "-7.231540",

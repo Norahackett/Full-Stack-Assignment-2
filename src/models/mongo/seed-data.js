@@ -160,7 +160,7 @@ export const seedData = {
       lat: "52.160858",
       lng: "-7.152420",
       reviewer: "->users.bart",
-      review: "easy hike, would",
+      review: "The views from the top are so beautiful",
     },
     two: {
       trail: "->trails.trail_2",
@@ -168,7 +168,7 @@ export const seedData = {
       lat: "52.160858",
       lng: "-7.152420",
       reviewer: "->users.bart",
-      review: "easy hike, would",
+      review: "easy hike, would recommend for all the family",
     },
     three: {
       trail: "->trails.trail_3",
@@ -176,7 +176,7 @@ export const seedData = {
       lat: "52.160858",
       lng: "-7.152420",
       reviewer: "->users.bart",
-      review: "easy hike, would",
+      review: "From a hiking perspective, it could be better",
     },
   },
   events: {

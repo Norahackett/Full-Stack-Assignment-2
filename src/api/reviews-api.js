@@ -1,6 +1,7 @@
 import Boom from "@hapi/boom";
 import {db} from "../models/db.js";
 
+
 export const reviewsApi = {
   findAll: {
     auth: {
@@ -10,6 +11,7 @@ export const reviewsApi = {
       const reviews = db.reviewStore.getAllReviews();
       return reviews;
     },
+
   },
   findByTrail: {
     auth: {
@@ -19,6 +21,8 @@ export const reviewsApi = {
       const reviews = await db.reviewStore.getReviewsByTrail(request.params.id);
       return reviews;
     },
+
+
   },
 
   makeReview: {

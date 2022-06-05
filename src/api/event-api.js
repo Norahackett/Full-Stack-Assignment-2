@@ -1,7 +1,6 @@
 import Boom from "@hapi/boom";
 import {db} from "../models/db.js";
-//import {IdSpec} from "../models/joi-schemas";
-//import {validationError} from "./logger";
+
 
 export const eventApi = {
     find: {
